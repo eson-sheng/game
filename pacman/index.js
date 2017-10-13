@@ -80,7 +80,8 @@
 				context.textAlign = 'center';
 				context.textBaseline = 'middle';
 				context.fillStyle = '#FFF';
-				context.fillText('404 未找到您访问的页面，但我们找到了 您儿时热爱的小游戏。',this.x,this.y);
+				// context.fillText('404 未找到您访问的页面，但我们找到了 您儿时热爱的小游戏。',this.x,this.y);
+				context.fillText('欢迎访问吃豆豆小游戏',this.x,this.y);
 			}
 		});
 		//版权信息
