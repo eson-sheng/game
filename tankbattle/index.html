@@ -44,4 +44,17 @@ body{overflow:hidden;}
 </div>
 
 </body>
+<!-- pv浏览统计 接收socket推送消息 -->
+<div id="ip" style="display:none;">
+<script type="text/javascript" src="http://ip.chinaz.com/getip.aspx"></script>
+</div>
+<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.bootcss.com/socket.io/2.0.4/socket.io.js"></script>
+<script type="text/javascript" src="https://cdn.bootcss.com/layer/3.1.0/layer.js"></script>
+<script type="text/javascript">
+function api_getip(){var data = $("#ip").text();var str = data.substr(2,data.length-4);var arr = str.split(",");var info = [];for(var i=0;i<arr.length;i++){var item = arr[i];var f = item.split(":");info[f[0]] = f[1];}return info;}
+var data = api_getip();var data_url = window.location.href;$.ajax({type:"POST",url:'/pv.php',dataType:"json",data:{"ip":data['ip'],"address":data['address'],"url":data_url},success:function(data){console.log('统计：'+data);},error:function(jqXHR){if (jqXHR.status!=200) {alert("发生错误：" + jqXHR.status);}}});
+var socket = io('http://eson.site:2120');uid = data['ip'];socket.on('connect', function(){socket.emit('login', uid);});socket.on('new_msg', function(msg){layer.msg(msg, {anim: Math.floor(Math.random()*7+1)-1});});
+</script>
+<!-- pv浏览统计 接收socket推送消息 -->
 </html>

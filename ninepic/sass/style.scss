@@ -1,0 +1,543 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "compass/css3";
+
+$ul_width:345px;
+$ul_height:345px;
+
+@keyframes bg {
+	0%{
+		background:#7AB9E2;
+	}
+
+	20%{
+		background:#6BE5DA;
+	}
+
+	40%{
+		background:#75E2A3;
+	}
+
+	60%{
+		background:#D6CB5E;
+	}
+
+	80%{
+		background:#7FD8C0;
+	}
+
+	100%{
+		background:#7AB9E2;
+	}
+}
+
+body{
+	// background-image:url("../images/bg.jpg");
+	// background-size:cover;
+	// background:#81C2D6;
+	animation:bg 20s infinite;
+}
+
+.info_all{
+	margin-bottom:40px;
+	// background: rgba(255,255,255,0.7);
+    position: relative;
+
+	.h1_html_title{
+		height:100px;
+		line-height:100px;
+		font-size: 24px;
+		color: #BA66BF;
+        background-image:-webkit-linear-gradient(to right bottom, #BA66BF 0%, #BA66BF 40% ,#3D8EDA 50%,#BA66BF 60%,#BA66BF);
+        background-image:linear-gradient(to right bottom, #BA66BF 0%, #BA66BF 40% ,#3D8EDA 50%,#BA66BF 60%,#BA66BF);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+		text-indent: 20px;
+		width: 100px;
+		font-weight: bold;
+		font-family:'Mircorsoft Yahei';
+	}
+
+	.div_TimeTip{
+		width: 130px;
+		height: 72px;
+		position: absolute;
+		top: 14px;
+		right: 10px;
+		background:rgba(0,0,0,0.7);
+		-webkit-border-radius: 5px;
+		border-radius: 5px;
+
+		.time{
+			width: 100%;
+			height: 36px;
+			display: flex;
+			align-items:center;
+
+			img{
+				width: 30px;
+				margin: 3px 0 3px 12px;
+			}
+
+			span{
+				padding-left:20px;
+				font-size: 14px;
+				color: #fff;
+				font-family:'Mircorsoft Yahei';
+				text-align: right;
+				width: 55px;
+			}
+		}
+
+		.tips{
+			width: 100%;
+			height: 36px;
+			display: flex;
+			align-items:center;
+
+			img{
+				width: 30px;
+				margin: 3px 0 3px 12px;
+			}
+
+			span{
+				padding-left:20px;
+				font-size: 14px;
+				color: #fff;
+				font-family:'Mircorsoft Yahei';
+				text-align: right;
+				width: 55px;
+			}
+		}
+
+		p{
+			position:absolute;
+			top: 50%;
+			left: 0;
+			right: 0;
+			width: 100%;
+			height: 1px;
+			@include scaleY(0.5);
+			background: #fff;
+		}
+	}	
+}
+
+.mask_div{
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	display:none;
+	z-index: 10;
+	background:rgba(22,22,22,0.7);
+	
+	.coverPicImg{
+		width: 100%;
+		position:absolute;
+		top: 50%;
+		left:50%;
+		@include translate3d(-50%,-50%,0);
+	}
+}
+
+.mask_div_reward{
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	z-index: 10;
+	background:rgba(22,22,22,0.9);
+
+	.div_rewardList{
+		width:300px;
+		height: 420px;
+		position:absolute;
+		top: 50%;
+		left:50%;
+		@include translate3d(-50%,-50%,0);
+		border:1px solid #BA915F;
+		@include border-radius(6px);
+
+		&::before{
+			content: '|';
+			position:absolute;
+			top: -40px;
+			right: 0;
+			color: #fff;
+			@include rotate(45deg);
+		}
+
+		&::after{
+			content: '|';
+			position:absolute;
+			top: -40px;
+			right: 0;
+			color: #fff;
+			@include rotate(-45deg);
+		}
+
+		.mask_div_title{
+			width: 100%;
+			height: 40px;
+			line-height: 40px;
+
+			&::before{
+				content:'';
+				position:absolute;
+				top: 40px;
+				width: 100%;
+				left: 0;
+				right: 0;
+				background-color:#574025;
+				height: 1px;
+				@include scaleY(0.5);
+			}
+
+			span{
+				width: 30%;
+				margin: 0 1.5%;
+				display: block;
+				float: left;
+				text-align:center;
+				color: #fff;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				overflow: hidden;
+				font-family: 'Mircorsoft Yahei';
+			}
+		}
+
+		.rewardList{
+			width: 100%;
+			height: 340px;
+			overflow: hidden;
+
+			&::before{
+				content:'powered by never forgot younth';
+				position:absolute;
+				bottom: 0px;
+				width: 100%;
+				left: 0;
+				right: 0;
+				height: 40px;
+				text-align: center;
+				line-height:40px;
+				color: #fff;
+				font-size: 12px;
+				font-family: 'Mircorsoft Yahei';
+			}
+
+			&::after{
+				content:'';
+				position:absolute;
+				bottom: 40px;
+				width: 100%;
+				left: 0;
+				right: 0;
+				background-color:#574025;
+				height: 1px;
+				@include scaleY(0.5);
+			}
+
+			ul{
+				width: 100%;
+				height: auto;
+				
+				li{
+					height: 36px;
+					line-height: 36px;
+
+					span{
+						width: 30%;
+						margin: 0 1.5%;
+						float: left;
+						text-align:center;
+						color: #E1B865;
+						font-size: 12px;
+						white-space: nowrap;
+						text-overflow: ellipsis;
+						overflow: hidden;
+						font-family: 'Mircorsoft Yahei';
+
+						&.rewardTime{
+							color: #7E7D7D;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+.mask_div_signIn{
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	z-index: 10;
+	background:rgba(22,22,22,0);
+	// display:none;
+	
+	.div_signIn{
+		width:300px;
+		height: 240px;
+		position:absolute;
+		top: 50%;
+		left:50%;
+		@include translate3d(-50%,-50%,0);
+		@include box-shadow(0 1px 5px 3px rgba(0,0,0,0.2));
+		@include border-radius(6px);
+		background:rgba(0,0,0,0.8);;
+
+		.div_signIn_title{
+			height: 40px;
+			margin: 20px 30px;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			line-height: 40px;	
+			text-align: center;
+			color: #FFF;
+			font-size: 24px;
+			font-family: 'Mircorsoft Yahei';
+		}
+
+		.div_signIn_description{
+			margin: 20px 30px;
+			display: block;
+			color: #FFF;
+			font-size: 12px;
+			font-family: 'Mircorsoft Yahei';
+		}
+
+		.div_signIn_InputName{
+			width:240px;
+			margin: 20px 30px;
+			display: block;
+			height: 36px;
+			border:none;
+			outline:none;
+			position:relative;
+			border-bottom:1px solid #aaa;
+			background:transparent;
+			color: #fff;
+		}
+
+		.btn_group{
+			margin: 20px 30px;
+			height: 40px;
+
+			.btn_cancle{
+				color: #fff;
+				width: 60px;
+				height: 40px;
+				float: right;
+				text-align: center;
+				line-height: 40px;
+				cursor: default;
+			}
+
+			.btn_submit{
+				color: #fff;
+				width: 60px;
+				height: 40px;
+				float: right;
+				margin-left: 10px;
+				text-align: center;
+				line-height: 40px;
+				color: #57DE4B;
+				cursor: default;
+			}
+		}
+	}
+}
+
+.content{
+	-webkit-box-shadow: 5px 10px 30px rgba(0,0,0,0.5);
+	-moz-box-shadow: 5px 10px 30px rgba(0,0,0,0.5);
+ 	box-shadow: 5px 10px 30px rgba(0,0,0,0.5);
+ 	width: $ul_width;
+ 	height: $ul_height;
+ 	background: #eee;
+ 	margin: 0 auto;
+
+
+ 	ul{
+ 		width: $ul_width;
+ 		height: $ul_height;
+ 		margin: 0;
+ 		padding: 0;
+
+ 		li{
+ 			width: $ul_width / 3-2;
+ 			height: $ul_height / 3-2;
+			float: left;
+			border: 1px solid #fff;
+ 		}
+		
+		@for $i from 0 through 8{
+			li:nth-child(#{$i}){
+				background-image:url("../images/#{$i}.jpg");
+				background-size:cover;
+			}
+		}
+ 	}
+}
+
+.userList{
+	position:absolute;
+	bottom:10px;
+	width:100%;
+	height:30px;
+	text-align:center;
+	line-height:30px;
+	text-decoration:underline;
+	font-family:'Mircorsoft Yahei';
+	color:#E54780;
+	cursor:pointer;
+}
+
+.coverPic{
+	position:relative;
+	padding:8px 16px;
+	background:transparent;
+	border:2px solid #fff;
+	@include border-radius(6px);
+	display:inline-block;
+	margin:20px 40px;
+	float:right;
+	background:rgba(255,255,255,0.4);
+	font-family:'Mircorsoft Yahei';
+	background-color:#A557AF;
+	color:#fff;
+	font-size:14px;
+	font-weight:500;
+	cursor:pointer;
+}
+
+
+@media screen and (max-width:400px){
+$ul_width:360px;
+$ul_height:360px;
+
+	.h1_html_title{
+		height:100px;
+		line-height:100px;
+		font-size: 20px;
+		color: #BA66BF;
+        background-image:-webkit-linear-gradient(to right bottom, #BA66BF 0%, #BA66BF 40% ,#3D8EDA 50%,#BA66BF 60%,#BA66BF);
+        background-image:linear-gradient(to right bottom, #BA66BF 0%, #BA66BF 40% ,#3D8EDA 50%,#BA66BF 60%,#BA66BF);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+		text-indent: 20px;
+		width: 100px;
+		font-family:'Mircorsoft Yahei';
+	}
+
+	.content{
+		-webkit-box-shadow: 5px 10px 30px rgba(0,0,0,0.5);
+		-moz-box-shadow: 5px 10px 30px rgba(0,0,0,0.5);
+	 	box-shadow: 5px 10px 30px rgba(0,0,0,0.5);
+	 	width: $ul_width;
+	 	height: $ul_height;
+	 	background: #eee;
+	 	margin: 0 auto;
+
+	 	ul{
+	 		width: $ul_width;
+	 		height: $ul_height;
+	 		margin: 0;
+	 		padding: 0;
+
+	 		li{
+	 			width: $ul_width / 3-2;
+	 			height: $ul_height / 3-2;
+				float: left;
+				border: 1px solid #fff;
+	 		}
+			
+	 	}
+	}
+
+	.content_all{
+		width:100%;
+		height:auto;
+		position:relative;
+	}
+}
+
+
+@media screen and (max-width:360px){
+$ul_width:280px;
+$ul_height:280px;
+
+	.content_all{
+		width:100%;
+		height:auto;
+		position:relative;
+	}
+
+
+	.h1_html_title{
+		height:100px;
+		line-height:100px;
+		font-size: 20px;
+		color: #BA66BF;
+        background-image:-webkit-linear-gradient(to right bottom, #BA66BF 0%, #BA66BF 40% ,#3D8EDA 50%,#BA66BF 60%,#BA66BF);
+        background-image:linear-gradient(to right bottom, #BA66BF 0%, #BA66BF 40% ,#3D8EDA 50%,#BA66BF 60%,#BA66BF);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+		text-indent: 20px;
+		width: 100px;
+		font-family:'Mircorsoft Yahei';
+	}
+
+	.content{
+		-webkit-box-shadow: 5px 10px 30px rgba(0,0,0,0.5);
+		-moz-box-shadow: 5px 10px 30px rgba(0,0,0,0.5);
+	 	box-shadow: 5px 10px 30px rgba(0,0,0,0.5);
+	 	width: $ul_width;
+	 	height: $ul_height;
+	 	background: #eee;
+	 	margin: 0 auto;
+
+	 	ul{
+	 		width: $ul_width;
+	 		height: $ul_height;
+	 		margin: 0;
+	 		padding: 0;
+
+	 		li{
+	 			width: $ul_width / 3-2;
+	 			height: $ul_height / 3-2;
+				float: left;
+				border: 1px solid #fff;
+	 		}
+			
+	 	}
+	}
+}
+
+
+@media screen and (min-width:768px){
+	.content_all{
+		width:400px;
+		height:auto;
+		margin: 0 auto;
+		position:relative;
+		min-height: 100%;
+	}
+
+	.coverPicImg{
+		width: 400px!important;
+	}
+}

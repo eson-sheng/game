@@ -1,0 +1,657 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 5, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+@keyframes bg {
+  0% {
+    background: #7AB9E2;
+  }
+  20% {
+    background: #6BE5DA;
+  }
+  40% {
+    background: #75E2A3;
+  }
+  60% {
+    background: #D6CB5E;
+  }
+  80% {
+    background: #7FD8C0;
+  }
+  100% {
+    background: #7AB9E2;
+  }
+}
+/* line 38, ../sass/style.scss */
+body {
+  animation: bg 20s infinite;
+}
+
+/* line 45, ../sass/style.scss */
+.info_all {
+  margin-bottom: 40px;
+  position: relative;
+}
+/* line 50, ../sass/style.scss */
+.info_all .h1_html_title {
+  height: 100px;
+  line-height: 100px;
+  font-size: 24px;
+  color: #BA66BF;
+  background-image: -webkit-linear-gradient(to right bottom, #BA66BF 0%, #BA66BF 40%, #3D8EDA 50%, #BA66BF 60%, #BA66BF);
+  background-image: linear-gradient(to right bottom, #ba66bf 0%, #ba66bf 40%, #3d8eda 50%, #ba66bf 60%, #ba66bf);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-indent: 20px;
+  width: 100px;
+  font-weight: bold;
+  font-family: 'Mircorsoft Yahei';
+}
+/* line 65, ../sass/style.scss */
+.info_all .div_TimeTip {
+  width: 130px;
+  height: 72px;
+  position: absolute;
+  top: 14px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+/* line 75, ../sass/style.scss */
+.info_all .div_TimeTip .time {
+  width: 100%;
+  height: 36px;
+  display: flex;
+  align-items: center;
+}
+/* line 81, ../sass/style.scss */
+.info_all .div_TimeTip .time img {
+  width: 30px;
+  margin: 3px 0 3px 12px;
+}
+/* line 86, ../sass/style.scss */
+.info_all .div_TimeTip .time span {
+  padding-left: 20px;
+  font-size: 14px;
+  color: #fff;
+  font-family: 'Mircorsoft Yahei';
+  text-align: right;
+  width: 55px;
+}
+/* line 96, ../sass/style.scss */
+.info_all .div_TimeTip .tips {
+  width: 100%;
+  height: 36px;
+  display: flex;
+  align-items: center;
+}
+/* line 102, ../sass/style.scss */
+.info_all .div_TimeTip .tips img {
+  width: 30px;
+  margin: 3px 0 3px 12px;
+}
+/* line 107, ../sass/style.scss */
+.info_all .div_TimeTip .tips span {
+  padding-left: 20px;
+  font-size: 14px;
+  color: #fff;
+  font-family: 'Mircorsoft Yahei';
+  text-align: right;
+  width: 55px;
+}
+/* line 117, ../sass/style.scss */
+.info_all .div_TimeTip p {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 1px;
+  -moz-transform: scaleY(0.5);
+  -ms-transform: scaleY(0.5);
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  background: #fff;
+}
+
+/* line 130, ../sass/style.scss */
+.mask_div {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  z-index: 10;
+  background: rgba(22, 22, 22, 0.7);
+}
+/* line 140, ../sass/style.scss */
+.mask_div .coverPicImg {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translate3d(-50%, -50%, 0);
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+}
+
+/* line 149, ../sass/style.scss */
+.mask_div_reward {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  background: rgba(22, 22, 22, 0.9);
+}
+/* line 158, ../sass/style.scss */
+.mask_div_reward .div_rewardList {
+  width: 300px;
+  height: 420px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translate3d(-50%, -50%, 0);
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+  border: 1px solid #BA915F;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+}
+/* line 168, ../sass/style.scss */
+.mask_div_reward .div_rewardList::before {
+  content: '|';
+  position: absolute;
+  top: -40px;
+  right: 0;
+  color: #fff;
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+/* line 177, ../sass/style.scss */
+.mask_div_reward .div_rewardList::after {
+  content: '|';
+  position: absolute;
+  top: -40px;
+  right: 0;
+  color: #fff;
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+/* line 186, ../sass/style.scss */
+.mask_div_reward .div_rewardList .mask_div_title {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+}
+/* line 191, ../sass/style.scss */
+.mask_div_reward .div_rewardList .mask_div_title::before {
+  content: '';
+  position: absolute;
+  top: 40px;
+  width: 100%;
+  left: 0;
+  right: 0;
+  background-color: #574025;
+  height: 1px;
+  -moz-transform: scaleY(0.5);
+  -ms-transform: scaleY(0.5);
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+/* line 203, ../sass/style.scss */
+.mask_div_reward .div_rewardList .mask_div_title span {
+  width: 30%;
+  margin: 0 1.5%;
+  display: block;
+  float: left;
+  text-align: center;
+  color: #fff;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-family: 'Mircorsoft Yahei';
+}
+/* line 217, ../sass/style.scss */
+.mask_div_reward .div_rewardList .rewardList {
+  width: 100%;
+  height: 340px;
+  overflow: hidden;
+}
+/* line 222, ../sass/style.scss */
+.mask_div_reward .div_rewardList .rewardList::before {
+  content: '排行榜每周刷新哦！';
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  left: 0;
+  right: 0;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  color: #fff;
+  font-size: 12px;
+  font-family: 'Mircorsoft Yahei';
+}
+/* line 237, ../sass/style.scss */
+.mask_div_reward .div_rewardList .rewardList::after {
+  content: '';
+  position: absolute;
+  bottom: 40px;
+  width: 100%;
+  left: 0;
+  right: 0;
+  background-color: #574025;
+  height: 1px;
+  -moz-transform: scaleY(0.5);
+  -ms-transform: scaleY(0.5);
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+/* line 249, ../sass/style.scss */
+.mask_div_reward .div_rewardList .rewardList ul {
+  width: 100%;
+  height: auto;
+}
+/* line 253, ../sass/style.scss */
+.mask_div_reward .div_rewardList .rewardList ul li {
+  height: 36px;
+  line-height: 36px;
+}
+/* line 257, ../sass/style.scss */
+.mask_div_reward .div_rewardList .rewardList ul li span {
+  width: 30%;
+  margin: 0 1.5%;
+  float: left;
+  text-align: center;
+  color: #E1B865;
+  font-size: 12px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-family: 'Mircorsoft Yahei';
+}
+/* line 269, ../sass/style.scss */
+.mask_div_reward .div_rewardList .rewardList ul li span.rewardTime {
+  color: #7E7D7D;
+}
+
+/* line 280, ../sass/style.scss */
+.mask_div_signIn {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  background: rgba(22, 22, 22, 0);
+}
+/* line 290, ../sass/style.scss */
+.mask_div_signIn .div_signIn {
+  width: 300px;
+  height: 240px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translate3d(-50%, -50%, 0);
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+  -moz-box-shadow: 0 1px 5px 3px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1px 5px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 5px 3px rgba(0, 0, 0, 0.2);
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.8);
+}
+/* line 301, ../sass/style.scss */
+.mask_div_signIn .div_signIn .div_signIn_title {
+  height: 40px;
+  margin: 20px 30px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  line-height: 40px;
+  text-align: center;
+  color: #FFF;
+  font-size: 24px;
+  font-family: 'Mircorsoft Yahei';
+}
+/* line 314, ../sass/style.scss */
+.mask_div_signIn .div_signIn .div_signIn_description {
+  margin: 20px 30px;
+  display: block;
+  color: #FFF;
+  font-size: 12px;
+  font-family: 'Mircorsoft Yahei';
+}
+/* line 322, ../sass/style.scss */
+.mask_div_signIn .div_signIn .div_signIn_InputName {
+  width: 240px;
+  margin: 20px 30px;
+  display: block;
+  height: 36px;
+  border: none;
+  outline: none;
+  position: relative;
+  border-bottom: 1px solid #aaa;
+  background: transparent;
+  color: #fff;
+}
+/* line 335, ../sass/style.scss */
+.mask_div_signIn .div_signIn .btn_group {
+  margin: 20px 30px;
+  height: 40px;
+}
+/* line 339, ../sass/style.scss */
+.mask_div_signIn .div_signIn .btn_group .btn_cancle {
+  color: #fff;
+  width: 60px;
+  height: 40px;
+  float: right;
+  text-align: center;
+  line-height: 40px;
+  cursor: default;
+}
+/* line 349, ../sass/style.scss */
+.mask_div_signIn .div_signIn .btn_group .btn_submit {
+  color: #fff;
+  width: 60px;
+  height: 40px;
+  float: right;
+  margin-left: 10px;
+  text-align: center;
+  line-height: 40px;
+  color: #57DE4B;
+  cursor: default;
+}
+
+/* line 364, ../sass/style.scss */
+.content {
+  -webkit-box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.5);
+  box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.5);
+  width: 345px;
+  height: 345px;
+  background: #eee;
+  margin: 0 auto;
+}
+/* line 374, ../sass/style.scss */
+.content ul {
+  width: 345px;
+  height: 345px;
+  margin: 0;
+  padding: 0;
+}
+/* line 380, ../sass/style.scss */
+.content ul li {
+  width: 113px;
+  height: 113px;
+  float: left;
+  border: 1px solid #fff;
+}
+/* line 388, ../sass/style.scss */
+.content ul li:nth-child(0) {
+  /*background-image: url("../images/0.jpg");*/
+  background-size: cover;
+}
+/* line 388, ../sass/style.scss */
+.content ul li:nth-child(1) {
+  /*background-image: url("../images/1.jpg");*/
+  background-size: cover;
+}
+/* line 388, ../sass/style.scss */
+.content ul li:nth-child(2) {
+  /*background-image: url("../images/2.jpg");*/
+  background-size: cover;
+}
+/* line 388, ../sass/style.scss */
+.content ul li:nth-child(3) {
+  /*background-image: url("../images/3.jpg");*/
+  background-size: cover;
+}
+/* line 388, ../sass/style.scss */
+.content ul li:nth-child(4) {
+  /*background-image: url("../images/4.jpg");*/
+  background-size: cover;
+}
+/* line 388, ../sass/style.scss */
+.content ul li:nth-child(5) {
+  /*background-image: url("../images/5.jpg");*/
+  background-size: cover;
+}
+/* line 388, ../sass/style.scss */
+.content ul li:nth-child(6) {
+  /*background-image: url("../images/6.jpg");*/
+  background-size: cover;
+}
+/* line 388, ../sass/style.scss */
+.content ul li:nth-child(7) {
+  /*background-image: url("../images/7.jpg");*/
+  background-size: cover;
+}
+/* line 388, ../sass/style.scss */
+.content ul li:nth-child(8) {
+  /*background-image: url("../images/8.jpg");*/
+  background-size: cover;
+}
+
+/* line 396, ../sass/style.scss */
+.userList {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  text-decoration: underline;
+  font-family: 'Mircorsoft Yahei';
+  color: pink;
+  cursor: pointer;
+}
+
+/* line 409, ../sass/style.scss */
+.coverPic {
+  position: relative;
+  padding: 8px 16px;
+  background: transparent;
+  border: 2px solid #fff;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  display: inline-block;
+  margin: 20px 40px;
+  float: right;
+  background: rgba(255, 255, 255, 0.4);
+  font-family: 'Mircorsoft Yahei';
+  background-color: #A557AF;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 400px) {
+  /* line 432, ../sass/style.scss */
+  .h1_html_title {
+    height: 100px;
+    line-height: 100px;
+    font-size: 20px;
+    color: #BA66BF;
+    background-image: -webkit-linear-gradient(to right bottom, #BA66BF 0%, #BA66BF 40%, #3D8EDA 50%, #BA66BF 60%, #BA66BF);
+    background-image: linear-gradient(to right bottom, #ba66bf 0%, #ba66bf 40%, #3d8eda 50%, #ba66bf 60%, #ba66bf);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-indent: 20px;
+    width: 100px;
+    font-family: 'Mircorsoft Yahei';
+  }
+
+  /* line 446, ../sass/style.scss */
+  .content {
+    -webkit-box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.5);
+    width: 360px;
+    height: 360px;
+    background: #eee;
+    margin: 0 auto;
+  }
+  /* line 455, ../sass/style.scss */
+  .content ul {
+    width: 360px;
+    height: 360px;
+    margin: 0;
+    padding: 0;
+  }
+  /* line 461, ../sass/style.scss */
+  .content ul li {
+    width: 118px;
+    height: 118px;
+    float: left;
+    border: 1px solid #fff;
+  }
+
+  /* line 471, ../sass/style.scss */
+  .content_all {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+}
+@media screen and (max-width: 360px) {
+  /* line 483, ../sass/style.scss */
+  .content_all {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  /* line 490, ../sass/style.scss */
+  .h1_html_title {
+    height: 100px;
+    line-height: 100px;
+    font-size: 20px;
+    color: #BA66BF;
+    background-image: -webkit-linear-gradient(to right bottom, #BA66BF 0%, #BA66BF 40%, #3D8EDA 50%, #BA66BF 60%, #BA66BF);
+    background-image: linear-gradient(to right bottom, #ba66bf 0%, #ba66bf 40%, #3d8eda 50%, #ba66bf 60%, #ba66bf);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-indent: 20px;
+    width: 100px;
+    font-family: 'Mircorsoft Yahei';
+  }
+
+  /* line 504, ../sass/style.scss */
+  .content {
+    -webkit-box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.5);
+    width: 280px;
+    height: 280px;
+    background: #eee;
+    margin: 0 auto;
+  }
+  /* line 513, ../sass/style.scss */
+  .content ul {
+    width: 280px;
+    height: 280px;
+    margin: 0;
+    padding: 0;
+  }
+  /* line 519, ../sass/style.scss */
+  .content ul li {
+    width: 91.33333px;
+    height: 91.33333px;
+    float: left;
+    border: 1px solid #fff;
+  }
+}
+@media screen and (min-width: 768px) {
+  /* line 532, ../sass/style.scss */
+  .content_all {
+    width: 400px;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+    min-height: 100%;
+  }
+
+  /* line 540, ../sass/style.scss */
+  .coverPicImg {
+    width: 400px !important;
+  }
+}

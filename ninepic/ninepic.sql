@@ -1,0 +1,13 @@
+CREATE DATABASE `lalala` DEFAULT charset=utf8;
+
+DROP TABLE IF EXISTS `ninepic`;
+CREATE TABLE IF NOT EXISTS `ninepic`(
+    `id` INT UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'ID',
+    `username` VARCHAR(32) NOT NULL DEFAULT '' COMMENT '昵称姓名',
+    `usetime` VARCHAR(32) NOT NULL DEFAULT '' COMMENT '用时',
+    `steps` INT NOT NULL DEFAULT '0' COMMENT '步数',
+    `time` timestamp NULL DEFAULT NULL COMMENT '创建时间',
+    `updatatime` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP COMMENT '修改时间',
+    `status` tinyint(1) NOT NULL DEFAULT '1' COMMENT '状态',
+    PRIMARY KEY(`id`)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='拼图游戏排名数据表';
