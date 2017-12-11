@@ -8,7 +8,7 @@ class ninepic
 
 	public function __construct()
 	{
-		$this->_db = new PDO("mysql:host=172.31.51.104;dbname=lalala;","root","Eson112923!");
+		$this->_db = new PDO("mysql:host=;dbname=lalala;","root","");
 	}
 
 	public function index()
