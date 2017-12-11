@@ -199,6 +199,10 @@
 
 		});
 
+		$("#wxclose").on('click',function(){
+			$('.mask_div_reward').remove();
+		});
+
 		//********************************  关闭图片使用的 滑动事件
         $('.coverPicImg').on('touchstart', function(event) {
             event.preventDefault();
@@ -285,6 +289,7 @@
             var str = '';
             str += '<div class="mask_div_reward">'
 			str += '<div class="div_rewardList">';
+			str += '<button id="wxclose" style="color:#fff;position: absolute;right:0;top: -40px;">ㄨ</button>'
 			str += '<div class="mask_div_title">';
 			str += '<span>用户名</span>';
 			str += '<span>时间</span>';
@@ -482,7 +487,6 @@
 <div id="ip" style="display:none;">
 <script type="text/javascript" src="http://ip.chinaz.com/getip.aspx"></script>
 </div>
-<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdn.bootcss.com/socket.io/2.0.4/socket.io.js"></script>
 <script type="text/javascript" src="https://cdn.bootcss.com/layer/3.1.0/layer.js"></script>
 <script type="text/javascript">

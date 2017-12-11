@@ -229,7 +229,7 @@ body {
 }
 /* line 168, ../sass/style.scss */
 .mask_div_reward .div_rewardList::before {
-  content: '|';
+  /*content: '|';*/
   position: absolute;
   top: -40px;
   right: 0;
@@ -241,7 +241,7 @@ body {
 }
 /* line 177, ../sass/style.scss */
 .mask_div_reward .div_rewardList::after {
-  content: '|';
+  /*content: '|';*/
   position: absolute;
   top: -40px;
   right: 0;
